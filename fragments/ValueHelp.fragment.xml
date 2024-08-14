@@ -1,0 +1,34 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <TableSelectDialog
+        class="sapUiSmallMargin"
+        id="_IDGenTable1"
+        items="{studModel>/xSHLxP_CDS_STD}"
+        confirm="onConfirm"
+    >
+        <columns>
+            <Column id="_IDGenColumn1">
+                <Text
+                    id="_Idfragvalhtxt"
+                    text="Student ID"
+                />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem
+                id="_IDGenColumnListItem1"
+                press="onConfirm"
+            >
+                <cells>
+                    <Text
+                        id="_Idfragvalhinp"
+                        text="{studModel>StdId}"
+                    />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </TableSelectDialog>
+</core:FragmentDefinition>

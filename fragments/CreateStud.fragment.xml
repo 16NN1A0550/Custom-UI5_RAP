@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" 
+    xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+    id="_IDGenFragmentDefinition1">
+    <Dialog id="_IDGenDialog1">
+        <f:SimpleForm id="idSmForm" layout="ResponsiveGridLayout" title="Create Student Data" adjustLabelSpan="true" minWidth="1024"
+        maxContainerCols="1" labelSpanL="1" labelSpanM="1" emptySpanL="7" emptySpanM="7" columnsL="1" columnsM="1">
+            <f:content>
+                <VBox id="_IDGenVBox1" class="sapUiSmallMarginBegin">
+                    <HBox id="_IDGenHBox1" justifyContent="Start" alignItems="Center">
+                        <Label id="idFragStdid" text="Student Id: "/>
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" width="30%"></ToolbarSpacer>
+                        <Input id="idFragStdInp" class="sapUiSmallMarginBegin" width="50%">
+                            <!-- <layoutData>
+        <layout:GridData id="_IDGenGridData1" span="L4 M3 S4"></layout:GridData>
+        </layoutData> -->
+                        </Input>
+                    </HBox>
+                    <HBox id="_IDGenHBox2" alignItems="Center">
+                        <Label id="_IDGenLabel2" text="Student Name:"/>
+                        <ToolbarSpacer id="_IDGenToolbarSpacer2" width="50%"></ToolbarSpacer>
+                        <Input id="idFragFnam" class="sapUiSmallMarginBegin" placeholder="First Name" width="70%"/>
+                        <Input id="idFragLnam" placeholder="Last Name" width="70%"/>
+                    </HBox>
+                    <HBox id="_IDGenHBox3" alignItems="Center">
+                        <Label id="_IDGenLabel3" text="Age:"/>
+                        <Input id="idFragage" class="sapUiSmallMarginBegin" width="70%"/>
+                    </HBox>
+                    <HBox id="_IDGenHBox4" alignItems="Center">
+                        <Label id="_IDGenLabel4" text="Gender:"/>
+                        <Input id="idFraggen" class="sapUiSmallMarginBegin" width="70%"/>
+                    </HBox>
+                    <HBox id="_IDGenHBox5" alignItems="Center">
+                        <Label id="_IDGenLabel5" text="Course:"/>
+                        <Input id="idFragcrs" class="sapUiSmallMarginBegin" width="70%"/>
+                    </HBox>                    
+                   <HBox id="_IDGenHBox6" class="sapUiMediumMarginTop" justifyContent="End">
+                    <Button id="_IDGenButton1" text="Save" type="Accept" press="onSave"  class="sapUiSmallMarginBeginEnd"/>
+                    <Button id="_IDGenButton2" text="Cancel" type="Reject" press="onCancel"  class="sapUiSmallMarginEnd"/>
+                    </HBox>
+                </VBox>
+               
+            </f:content>
+        </f:SimpleForm>
+    </Dialog>
+</core:FragmentDefinition>

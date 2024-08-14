@@ -1,0 +1,56 @@
+    <core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <!-- 1. Below code is one of the way to display fragment in a pop up(Dialog box) -->
+        <Dialog
+        id="_IDGenDialog1"
+        contentWidth="50%"
+    >
+        <form:SimpleForm id="_IDGenSimpleForm1">
+            <form:content>
+                <VBox id="_IDGenVBox1"> 
+                    <Table
+                        class="sapUiSmallMargin"
+                        id="_IDGenTable1"
+                        items="{studModel>/xSHLxP_CDS_STD}" mode="MultiSelect"
+                    >
+                        <columns>
+                            <Column id="_IDGenColumn1">
+                                <Text
+                                    id="_Idfragvalhtxt"
+                                    text="Student ID"
+                                />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem
+                                id="_IDGenColumnListItem1"
+                                press="onConfirm"
+                            >
+                                <cells>
+                                    <Text
+                                        id="_Idfragvalhinp"
+                                        text="{studModel>StdId}"
+                                    />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                    <HBox
+                        id="_IDGenHBox1"
+                        justifyContent="Center"
+                    >
+                        <Button
+                            id="_IDGenButton1"
+                            text="OK"
+                            class="sapUiSmallMargin"
+                            press="onOk"
+                        />
+                    </HBox>
+                </VBox>
+            </form:content>
+        </form:SimpleForm> 
+    </Dialog>
+</core:FragmentDefinition>

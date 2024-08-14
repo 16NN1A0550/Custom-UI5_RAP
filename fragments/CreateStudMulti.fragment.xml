@@ -1,0 +1,80 @@
+<core:FragmentDefinition xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" 
+    xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+    id="_IDGenFragmentDefinition1">
+    <Dialog id="_IDGenDialog1" >
+    <Toolbar id="_IDGenToolbar1" class="sapUiSmallMargin">
+    <ToolbarSpacer id="_IDGenToolbarSpacer1" ></ToolbarSpacer>
+    <Button id="_IDGenButton1" text="Add" class="sapUiTinyMargin"
+     icon="sap-icon://add" press="onAdd"></Button>
+    </Toolbar>
+        <Table
+            id="CreateStdMultiTab" items="{CreateRow>/}"
+            mode="MultiSelect" class="sapUiSmallMargin" growing="true" growingThreshold="20"
+        >
+            <columns>
+                <Column id="stdid">
+                    <Text
+                        id="stdidTxt"
+                        text="Student Id"
+                    />
+                </Column>
+                <Column id="stdfstnam">
+                    <Text
+                        id="stdfstname"
+                        text="First Name"
+                    />
+                </Column>
+                <Column id="stdlstnam">
+                    <Text
+                        id="stdlstname"
+                        text="Last Name"
+                    />
+                </Column>
+                <Column id="stdag">
+                    <Text
+                        id="stdage"
+                        text="Age"
+                    />
+                </Column>
+                <Column id="stdgen">
+                    <Text
+                        id="stdgender"
+                        text="Gender"
+                    />
+                </Column>
+                <Column id="stdcours">
+                    <Text
+                        id="stdcourse"
+                        text="Course"
+                    />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="stditem">
+                    <cells>
+                        <Input
+                            id="stdiditm" value="{CreateRow>}"
+                        />
+                        <Input
+                            id="stdfstitm" value="{CreateRow>}"
+                        />
+                        <Input
+                            id="stdlstitm" value="{CreateRow>}"
+                        />
+                        <Input
+                            id="stdagitm" value="{CreateRow>}"
+                        /> 
+                        <ComboBox id="_IDGenComboBox1" 
+                        items="{path: 'CreateRow>/Gender'}" >
+                        <core:Item id="_IDGenItem1" text="{Gen}"></core:Item>
+                        </ComboBox>
+                        <Input
+                            id="stdcrsitm" value="{CreateRow>}"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+    </Dialog>
+</core:FragmentDefinition>

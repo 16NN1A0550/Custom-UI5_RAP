@@ -1,0 +1,111 @@
+<mvc:View
+    controllerName="student.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m" id="view1"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content />
+        <Table
+            id="stdTab"
+            items="{studModel>/xSHLxP_CDS_STD}" mode="MultiSelect"
+        >
+            <headerToolbar>
+                <OverflowToolbar id="stdOflow">
+                    <Title
+                        id="stdTit"
+                        text="Student Details"
+                    />
+                    <Input id="_IDGenInput1" placeholder="Student id" width="30%" 
+                    showValueHelp="true" class="sapUiMediumMarginBegin" 
+                    valueHelpRequest="onValueHelp"></Input>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1"></ToolbarSpacer>
+                    <Button
+                        id="idcreatebutt"
+                        text="Create"
+                        press="onCreate"
+                    />
+                    <Button
+                        id="idmodbutt"
+                        text="Modify"
+                        press="onModify"
+                    />
+                </OverflowToolbar>
+                <!-- <HBox id="_IDGenHBox1">
+                    
+                </HBox> -->
+            </headerToolbar>
+            <columns>
+                <Column id="stdid">
+                    <Text
+                        id="stdidTxt"
+                        text="Student Id"
+                    />
+                </Column>
+                <Column id="stdfstnam">
+                    <Text
+                        id="stdfstname"
+                        text="First Name"
+                    />
+                </Column>
+                <Column id="stdlstnam">
+                    <Text
+                        id="stdlstname"
+                        text="Last Name"
+                    />
+                </Column>
+                <Column id="stdag">
+                    <Text
+                        id="stdage"
+                        text="Age"
+                    />
+                </Column>
+                <Column id="stdgen">
+                    <Text
+                        id="stdgender"
+                        text="Gender"
+                    />
+                </Column>
+                <Column id="stdcours">
+                    <Text
+                        id="stdcourse"
+                        text="Course"
+                    />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="stditem" type="Navigation" press="onNavigate">
+                    <cells>
+                        <Text
+                            id="stdiditm"
+                            text="{studModel>StdId}"
+                        />
+                        <Text
+                            id="stdfstitm"
+                            text="{studModel>Firstname}"
+                        />
+                        <Text
+                            id="stdlstitm"
+                            text="{studModel>Lastname}"
+                        />
+                        <Text
+                            id="stdagitm"
+                            text="{studModel>Age}"
+                        />
+                        <Text
+                            id="stdgenitm"
+                            text="{studModel>Gender}"
+                        />
+                        <Text
+                            id="stdcrsitm"
+                            text="{studModel>course}"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
