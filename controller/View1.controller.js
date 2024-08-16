@@ -183,6 +183,44 @@ sap.ui.define([
                 // });
                 // this.getView().getModel("studModel").submitChange();
 
+            },
+
+            onMultiCreate: function (oEvent) {
+                var oStdData = [];
+                var oTable = sap.ui.core.Fragment.byId("fragID", "CreateStdMultiTab");
+                var oData = this.getView().getModel("CreateRow").getData();
+                oStdData.push(oData);
+                var oModel = this.getOwnerComponent().getModel('studModel');
+                oModel.setDeferredGroups(["batchFunctionImport"])
+                var len = oStdData.length
+                var std_length = oStdData[len - 1].length;
+                for (i = 0; i < std_length; i++) {
+                    oModel.callFunction("/create_multi_student", {
+                        method: "POST",
+                        batchGroupId: "batchFunctionImport",
+                        changeSetId: i,
+                        urlParameters: {
+                            "std_id": oStdData[len - 1][i].StdId,
+                            "Firstname": oStdData[len - 1][i].Firstname,
+                            "Lastname": oStdData[len - 1][i].Lastname,
+                            "Age": oStdData[len - 1][i].Age,
+                            "Gender": oStdData[len - 1][i].Gender,
+                            "course": oStdData[len - 1][i].course
+
+                        }
+
+                    })
+                }
+
+                oModel.submitChanges({
+                    batchGroupId: "batchFunctionImport",
+                    success: function (odata, response) {
+
+                    },
+                    error: function (oerror) {
+
+                    }
+                })
             }
 
         });
